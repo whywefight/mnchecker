@@ -45,10 +45,10 @@ userDirName = ".mnchecker"
 
 #==========================================================
 # Currency defaults
-defaultCurrencyHandle = "vivo"
-defaultCliBin = "vivo-cli"
-defaultDaemonBin = "vivod"
-defaultDataDir = os.path.join(os.path.abspath(os.path.expanduser("~")), ".vivocore")
+defaultCurrencyHandle = "crds"
+defaultCliBin = "credits-cli"
+defaultDaemonBin = "creditsd"
+defaultDataDir = os.path.join(os.path.abspath(os.path.expanduser("~")), ".credits")
 
 #==========================================================
 # Auxiliary Files
@@ -468,7 +468,7 @@ class ExplorerzTopBlockExplorer(BlockExplorer):
 		self.name = "explorerz.top"
 	def queryBlockCount(self, currency):
 		return urllib.request.urlopen(\
-			"http://{currencyHandle}.explorerz.top:3003/api/getblockcount".format(\
+			"http://{currencyHandle}.explorerz.top:3007/api/getblockcount".format(\
 			currencyHandle=currency.handle)).read().decode()
 
 #==========================================================
